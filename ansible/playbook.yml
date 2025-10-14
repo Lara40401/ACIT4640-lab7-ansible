@@ -1,13 +1,6 @@
 - name: Configure web servers
-  hosts: all
-  become: yes
   tasks:
     - name: Install nginx
-      ansible.builtin.apt: 
-        name: nginx
-        state: latest
-        update_cache: yes
-
     - name: create directory structure for web documents
     - name: copy nginx conf file to server
     - name: create link to nginx config file to enable it
